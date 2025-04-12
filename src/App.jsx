@@ -43,7 +43,10 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black to-yellow-700 p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-black to-yellow-700 p-4">
+      {/* <div className='w-full h-full'>
+        <img src="/5.svg" alt="" />
+      </div> */}
       <div className="flex gap-4 bg-gray-700 border border-gray-400 rounded-2xl shadow-lg text-white p-6 max-w-5xl w-full">
         <div className="w-full max-w-4/12 flex flex-col items-start">
           <h2 className="text-2xl font-bold mb-4 text-center text-yellow-500">Калькулятор</h2>
