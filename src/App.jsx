@@ -44,11 +44,12 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-black to-yellow-700 p-4">
-      {/* <div className='w-full h-full'>
-        <img src="/5.svg" alt="" />
-      </div> */}
-      <div className="flex gap-4 bg-gray-700 border border-gray-400 rounded-2xl shadow-lg text-white p-6 max-w-5xl w-full">
-        <div className="w-full max-w-4/12 flex flex-col items-start">
+      <div className="flex flex-col gap-8 bg-gray-700 border border-gray-400 rounded-2xl shadow-lg text-white p-6 max-w-5xl w-full">
+        <div className='w-full h-full'>
+          <img src="/5.svg" alt="" />
+        </div>
+        <div className='flex flex-col md:flex-row gap-4'>
+        <div className="w-full md:max-w-4/12 flex flex-col items-start">
           <h2 className="text-2xl font-bold mb-4 text-center text-yellow-500">Калькулятор</h2>
           <form className="w-full flex flex-col gap-4" onSubmit={handleCalculate}>
             <div className="relative w-full">
@@ -73,25 +74,25 @@ function App() {
             </div>
 
             <div className="relative w-full">
-  <input
-    type="number"
-    id="months"
-    placeholder=" "
-    className="peer w-full h-12 p-2 border border-gray-300 rounded-md transition-colors duration-300 focus:border-yellow-400 focus:outline-none"
-    value={months}
-    onChange={(e) => setMonths(e.target.value)}
-    required
-  />
-  <label
-    htmlFor="months"
-    className="absolute left-2.5 top-1/2 -translate-y-1/2 px-1 text-sm bg-gray-700 text-gray-400 transition-all duration-300
-      peer-focus:top-0 peer-focus:text-xs peer-focus:text-yellow-400
-      peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
-      peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-white"
-  >
-    Кількість місяців
-  </label>
-</div>
+        <input
+          type="number"
+          id="months"
+          placeholder=" "
+          className="peer w-full h-12 p-2 border border-gray-300 rounded-md transition-colors duration-300 focus:border-yellow-400 focus:outline-none"
+          value={months}
+          onChange={(e) => setMonths(e.target.value)}
+          required
+        />
+        <label
+          htmlFor="months"
+          className="absolute left-2.5 top-1/2 -translate-y-1/2 px-1 text-sm bg-gray-700 text-gray-400 transition-all duration-300
+            peer-focus:top-0 peer-focus:text-xs peer-focus:text-yellow-400
+            peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
+            peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-white"
+        >
+          Кількість місяців
+        </label>
+      </div>
 
 <div className="relative w-full">
   <input
@@ -152,24 +153,24 @@ function App() {
             </p>
 
             <div className="overflow-x-auto">
-              <table className="w-full text-sm text-left border-collapse">
+              <table className="w-full text-xs md:text-sm text-left border-collapse">
                 <thead>
                   <tr className="border-b border-yellow-500 text-bold">
-                    <th className="px-2 py-1">№</th>
-                    <th className="px-2 py-1">Початок</th>
-                    <th className="px-2 py-1">Дохід</th>
-                    <th className="px-2 py-1">Довкладення</th>
-                    <th className="px-2 py-1">Кінець</th>
+                    <th className="px-0.5 md:px-2 py-1">№</th>
+                    <th className="px-0.5 md:px-2 py-1">Початок</th>
+                    <th className="px-0.5 md:px-2 py-1">Дохід</th>
+                    <th className="px-0.5 md:px-2 py-1">Довкладення</th>
+                    <th className="px-0.5 md:px-2 py-1">Кінець</th>
                   </tr>
                 </thead>
                 <tbody>
                   {result.history.map((row) => (
                     <tr key={row.month}>
-                      <td className="px-2 py-1 border-b border-gray-400">{row.month}</td>
-                      <td className="px-2 py-1 border-b border-gray-400">${row.start}</td>
-                      <td className="px-2 py-1 border-b border-gray-400">${row.income}</td>
-                      <td className="px-2 py-1 border-b border-gray-400">${row.addition}</td>
-                      <td className="px-2 py-1 border-b border-gray-400">${row.end}</td>
+                      <td className="px-0.5 md:px-2 py-1 border-b border-gray-400">{row.month}</td>
+                      <td className="px-0.5 md:px-2 py-1 border-b border-gray-400">${row.start}</td>
+                      <td className="px-0.5 md:px-2 py-1 border-b border-gray-400">${row.income}</td>
+                      <td className="px-0.5 md:px-2 py-1 border-b border-gray-400">${row.addition}</td>
+                      <td className="px-0.5 md:px-2 py-1 border-b border-gray-400">${row.end}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -177,6 +178,7 @@ function App() {
             </div>
           </div>
         )}
+        </div>
       </div>
     </div>
   )
