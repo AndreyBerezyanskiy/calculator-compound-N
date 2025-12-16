@@ -43,21 +43,21 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-black to-yellow-700 p-4">
-      <div className="flex flex-col gap-8 bg-gray-700 border border-gray-400 rounded-2xl shadow-lg text-white p-6 max-w-5xl w-full">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-white to-green-700 p-4">
+      <div className="flex flex-col gap-8 bg-gray-200 border border-gray-400 rounded-2xl shadow-lg text-black p-6 max-w-5xl w-full">
         <div className='w-full h-full'>
-          <img src="/5.svg" alt="" />
+          <h1 className='text-5xl font-bold text-center text-green-800'>Капітал з 1%</h1>
         </div>
         <div className='flex flex-col md:flex-row gap-4'>
         <div className="w-full md:max-w-4/12 flex flex-col items-start">
-          <h2 className="text-2xl font-bold mb-4 text-center text-yellow-500">Калькулятор</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center text-green-800">Калькулятор</h2>
           <form className="w-full flex flex-col gap-4" onSubmit={handleCalculate}>
             <div className="relative w-full">
               <input
                 type="number"
                 id="initialCapital"
                 placeholder=" "
-                className="peer w-full h-12 p-2 border border-gray-300 rounded-md transition-colors duration-300 focus:border-yellow-400 focus:outline-none"
+                className="peer w-full h-12 p-2 border border-gray-600 rounded-md transition-colors duration-300 focus:border-green-400 focus:outline-none"
                 value={initialCapital}
                 onChange={(e) => setInitialCapital(e.target.value)}
                 required
@@ -65,7 +65,7 @@ function App() {
               <label
                 htmlFor="initialCapital"
                 className="absolute left-2.5 top-1/2 -translate-y-1/2 px-1 text-sm bg-gray-700 text-gray-400 transition-all duration-300
-                  peer-focus:top-0 peer-focus:text-xs peer-focus:text-yellow-400
+                  peer-focus:top-0 peer-focus:text-xs peer-focus:text-green-400
                   peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
                   peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-white"
               >
@@ -78,7 +78,7 @@ function App() {
           type="number"
           id="months"
           placeholder=" "
-          className="peer w-full h-12 p-2 border border-gray-300 rounded-md transition-colors duration-300 focus:border-yellow-400 focus:outline-none"
+          className="peer w-full h-12 p-2 border border-gray-600 rounded-md transition-colors duration-300 focus:border-yellow-400 focus:outline-none"
           value={months}
           onChange={(e) => setMonths(e.target.value)}
           required
@@ -86,7 +86,7 @@ function App() {
         <label
           htmlFor="months"
           className="absolute left-2.5 top-1/2 -translate-y-1/2 px-1 text-sm bg-gray-700 text-gray-400 transition-all duration-300
-            peer-focus:top-0 peer-focus:text-xs peer-focus:text-yellow-400
+            peer-focus:top-0 peer-focus:text-xs peer-focus:text-green-400
             peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
             peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-white"
         >
@@ -99,7 +99,7 @@ function App() {
     type="number"
     id="monthlyRate"
     placeholder=" "
-    className="peer w-full h-12 p-2 border border-gray-300 rounded-md transition-colors duration-300 focus:border-yellow-400 focus:outline-none"
+    className="peer w-full h-12 p-2 border border-gray-600 rounded-md transition-colors duration-300 focus:border-yellow-400 focus:outline-none"
     value={monthlyRate}
     onChange={(e) => setMonthlyRate(e.target.value)}
     required
@@ -107,7 +107,7 @@ function App() {
   <label
     htmlFor="monthlyRate"
     className="absolute left-2.5 top-1/2 -translate-y-1/2 px-1 text-sm bg-gray-700 text-gray-400 transition-all duration-300
-      peer-focus:top-0 peer-focus:text-xs peer-focus:text-yellow-400
+      peer-focus:top-0 peer-focus:text-xs peer-focus:text-green-400
       peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
       peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-white"
   >
@@ -120,7 +120,7 @@ function App() {
     type="number"
     id="monthlyAddition"
     placeholder=" "
-    className="peer w-full h-12 p-2 border border-gray-300 rounded-md transition-colors duration-300 focus:border-yellow-400 focus:outline-none"
+    className="peer w-full h-12 p-2 border border-gray-600 rounded-md transition-colors duration-300 focus:border-yellow-400 focus:outline-none"
     value={monthlyAddition}
     onChange={(e) => setMonthlyAddition(e.target.value)}
     required
@@ -128,7 +128,7 @@ function App() {
   <label
     htmlFor="monthlyAddition"
     className="absolute left-2.5 top-1/2 -translate-y-1/2 px-1 text-sm bg-gray-700 text-gray-400 transition-all duration-300
-      peer-focus:top-0 peer-focus:text-xs peer-focus:text-yellow-400
+      peer-focus:top-0 peer-focus:text-xs peer-focus:text-green-400
       peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
       peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-white"
   >
@@ -137,7 +137,7 @@ function App() {
 </div>
 
             <div>
-              <button type="submit" className="w-full h-12 bg-yellow-600 text-white p-2 rounded-2xl hover:bg-yellow-500 duration-150 transition-colors">
+              <button type="submit" className="w-full h-12 bg-green-800 text-white p-2 rounded-2xl hover:bg-green-600 duration-150 transition-colors">
                 Порахувати
               </button>
             </div>
@@ -145,17 +145,17 @@ function App() {
         </div>
 
         {result && (
-          <div className="w-full p-4 rounded-md border border-yellow-500 ">
-            <h2 className="text-lg font-semibold mb-2 text-yellow-500">Результат підрахунку</h2>
+          <div className="w-full p-4 rounded-md border border-green-800 ">
+            <h2 className="text-lg font-semibold mb-2 text-green-800">Результат підрахунку</h2>
             <p className="mb-2">
-              До кінця терміну <strong className='text-yellow-500'>({months} міс.)</strong>, ваш внесок становитиме <strong className='text-yellow-500'>${result.finalAmount}</strong>,
-              враховуючи загальний дохід <strong className='text-yellow-500'>${result.totalIncome}</strong>.
+              До кінця терміну <strong className='text-green-800'>({months} міс.)</strong>, ваш внесок становитиме <strong className='text-green-800'>${result.finalAmount}</strong>,
+              враховуючи загальний дохід <strong className='text-green-800'>${result.totalIncome}</strong>.
             </p>
 
             <div className="overflow-x-auto">
               <table className="w-full text-xs md:text-sm text-left border-collapse">
                 <thead>
-                  <tr className="border-b border-yellow-500 text-bold">
+                  <tr className="border-b border-green-800 text-bold">
                     <th className="px-0.5 md:px-2 py-1">№</th>
                     <th className="px-0.5 md:px-2 py-1">Початок</th>
                     <th className="px-0.5 md:px-2 py-1">Дохід</th>
