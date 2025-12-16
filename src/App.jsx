@@ -90,7 +90,7 @@ function App() {
             peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
             peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-white"
         >
-          Кількість місяців
+          Кількість періодів
         </label>
       </div>
 
@@ -111,7 +111,7 @@ function App() {
       peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
       peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-white"
   >
-    Середня дохідність за 1 місяць (%)
+    Середня дохідність за 1 період (%)
   </label>
 </div>
 
@@ -132,7 +132,7 @@ function App() {
       peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
       peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:text-white"
   >
-    Докладання кожен місяць ($)
+    Докладання кожен період ($)
   </label>
 </div>
 
@@ -148,7 +148,7 @@ function App() {
           <div className="w-full p-4 rounded-md border border-green-800 ">
             <h2 className="text-lg font-semibold mb-2 text-green-800">Результат підрахунку</h2>
             <p className="mb-2">
-              До кінця терміну <strong className='text-green-800'>({months} міс.)</strong>, ваш внесок становитиме <strong className='text-green-800'>${result.finalAmount}</strong>,
+              До кінця терміну <strong className='text-green-800'>({months} пер.)</strong>, ваш внесок становитиме <strong className='text-green-800'>${result.finalAmount}</strong>,
               враховуючи загальний дохід <strong className='text-green-800'>${result.totalIncome}</strong>.
             </p>
 
