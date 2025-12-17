@@ -50,7 +50,7 @@ function App() {
         </div>
         <div className='flex flex-col md:flex-row gap-4'>
         <div className="w-full md:max-w-4/12 flex flex-col items-start">
-          <h2 className="text-2xl font-bold mb-4 text-center text-green-800">Калькулятор</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center text-green-800">Калькулятор реінвестицій</h2>
           <form className="w-full flex flex-col gap-4" onSubmit={handleCalculate}>
             <div className="relative w-full">
               <input
